@@ -38,7 +38,7 @@ public class Authentication {
 					.entity(String.format("HELLO %s %s", name, surname))
 					.build();
 		} else {
-			return Response.status(Response.Status.FORBIDDEN).build();
+			return Response.status(Response.Status.UNAUTHORIZED).build();
 		}
 	}
 	
@@ -53,7 +53,7 @@ public class Authentication {
 					.entity(String.format("HELLO %s %s", name, surname))
 					.build();
 		} else {
-			return Response.status(Response.Status.FORBIDDEN).build();
+			return Response.status(Response.Status.UNAUTHORIZED).build();
 		}
 	}
 
@@ -74,7 +74,7 @@ public class Authentication {
 					.entity("Alright, you can get in")
 					.build();
 		} else {
-			return Response.status(Response.Status.FORBIDDEN).build();
+			return Response.status(Response.Status.UNAUTHORIZED).build();
 		}
 	}
 	
